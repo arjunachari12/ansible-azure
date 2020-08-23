@@ -1,13 +1,13 @@
----
-- name: create RG
-  hosts: localhost
+--- 
+- 
   connection: local
-  
+  hosts: localhost
+  name: "create RG"
   tasks: 
-  - name: Create a resource group
-    azure_rm_resourcegroup:
-      name: myResourceGroup
-      location: westus
-      tags:
-        testing: testing
-        delete: never
+    - 
+      azure_rm_resourcegroup: 
+        location: westus
+        name: myResourceGroup
+        tags: 
+          delete: never
+          testing: testing
