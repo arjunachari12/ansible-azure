@@ -1,10 +1,11 @@
---- 
-- 
-  connection: local
+---
+- name: Create RG
   hosts: localhost
-  name: "create RG"
-  tasks: 
-    - 
+  connection: local
+  gather_facts: False
+
+  tasks:
+    - name: Create RG
       azure_rm_resourcegroup: 
         location: westus
         name: myResourceGroup
