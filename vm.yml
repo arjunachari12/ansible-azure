@@ -1,0 +1,18 @@
+---
+- name: Create and remove an Azure virtual machine
+  hosts: localhost
+  connection: local
+  gather_facts: False
+
+  tasks:
+    - name: Create VM with defaults
+      azure_rm_virtualmachine:
+        resource_group: myResourceGroup
+        name: testvm10
+        admin_username: arjun
+        admin_password: <arjun@123
+        image:
+          offer: CentOS
+          publisher: OpenLogic
+          sku: '7.1'
+          version: latest
